@@ -4,8 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3d70c71a0e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="app.js"></script>
     <title>Igor Sasic | Portfolio</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <video
+        autoplay
+        loop
+        muted
+        plays-inline
+        class="background-clip"
+        src="/assets/background.mov"
+        type="video/mov"
+      ></video>
+      <header class="wrapper header">
+          <div class="logo">
+              <img
+              src="/assets/front-end-developer-igor-sasic-high-resolution-logo.png"
+              alt="logo"
+              />
+            </div>
+            <button id="open-menu" class="open-menu icon"><i class="fa-solid fa-bars"></i></button>
+        <nav class="links" id="links">
+          <ul>
+            <li><button id="close-menu" class="close-menu icon"><i class="fa-solid fa-x"></i></button></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="home wrapper flex-center" id="home">
+          <div class="home-content">
+            <h3>Hello,</h3>
+            <h1>My name is Igor</h1>
+            <h3>And I'm a <span class="acent">Front-End</span> Developer</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
+              distinctio nobis tempora voluptatem fuga rerum suscipit magnam
+              dicta excepturi ab fugit
+            </p>
+            <div class="social">
+              <a href="#" target="_blank" class="flex-center icon"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+              <a href="#" target="_blank" class="flex-center icon"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

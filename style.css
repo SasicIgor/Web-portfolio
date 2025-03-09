@@ -1,0 +1,246 @@
+:root {
+  --color-acent-400: #f25f3a;
+  --color-acent-100: #ffefeb;
+  --color-primary-400: #242d52;
+  --color-primary-100: #a0aad5;
+  --color-neutral-100: #1d1e25;
+  --color-neutral-900: #000000;
+  --color-white: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+/* utility classes */
+.wrapper {
+  padding: 0 10rem;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.acent {
+  color: var(--color-acent-400);
+}
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+.hidden{
+  display: none;
+}
+
+/* HEADER STYLE */
+
+.background-clip {
+  position: absolute;
+  width: 100vw;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 15px var(--color-neutral-900);
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 23;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 7rem;
+  border-radius: 10px;
+}
+.links {
+  width: 30%;
+}
+.links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.links ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-acent-400);
+}
+.links ul li a:hover {
+  color: var(--color-acent-100);
+}
+.links ul li a:after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-acent-100);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  border-radius: 3rem;
+  transition: 0.3s;
+}
+.links a:hover:after {
+  width: 100%;
+}
+.close-menu, .open-menu{
+  display: none;
+}
+
+/* HERO STYLE */
+
+.home {
+  height: 100vh;
+}
+.home-content {
+  color: white;
+}
+.home-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.home-content h3 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.home-content p {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+.social {
+  display: flex;
+  gap: 3rem;
+}
+.social a {
+  font-size: 20px;
+  border: 2px solid;
+
+  text-decoration: none;
+  border-radius: 50%;
+  color: var(--color-acent-400);
+  margin: 1rem;
+  margin-left: 0;
+  transition: 0.3s ease;
+}
+.social a:hover {
+  background-color: var(--color-acent-400);
+  color: var(--color-acent-100);
+  box-shadow: 0 0 15px var(--color-acent-100);
+  transform: scale(1.2) translateY(-10px);
+  border: none;
+}
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    padding: 0 7rem;
+  }
+  .home-content h1 {
+    font-size: 4.5rem;
+  }
+  .home-content h3 {
+    font-size: 3rem;
+  }
+  .home-content p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 0 5rem;
+  }
+  .home-content h1 {
+    font-size: 4rem;
+  }
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+  .home-content p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 930px) {
+  .video-clip {
+  }
+  .wrapper {
+    padding: 0 4rem;
+  }
+  .home-content h1 {
+    font-size: 3rem;
+  }
+  .home-content h3 {
+    font-size: 2rem;
+  }
+  .home-content p {
+    font-size: 1rem;
+  }
+  .links {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .background-clip {
+    display: none;
+  }
+  .home {
+    background-image: url(assets/tablebackground.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .wrapper {
+    padding: 0 3rem;
+  }
+  .links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(15em, 100%);
+    z-index: 10;
+    border-left: 1px solid var(--color-acent-100);
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: right 400ms ease-out;
+  }
+  .close-menu, .open-menu{
+    display: inline-block;
+    background: transparent;
+    border: none;
+    color: var(--color-acent-100)
+  }
+  .show {
+    right: 0;
+  }
+  .links ul {
+    flex-direction: column;
+  }
+  .links ul li {
+    width: 100%;
+    padding: 1rem;
+  }
+  .links ul li a:after {
+    display: none;
+  }
+}
