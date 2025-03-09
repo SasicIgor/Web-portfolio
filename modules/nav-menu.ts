@@ -1,4 +1,10 @@
-export function toggleMenu(links, openButton, closeButton) {
+type toggleMenuProps = {
+  links: HTMLElement;
+  openButton: HTMLElement;
+  closeButton: HTMLElement
+}
+
+export function toggleMenu({links, openButton, closeButton}:toggleMenuProps) {
   function openMenu() {
     links.classList.add("show");
     openButton.classList.add("hidden");

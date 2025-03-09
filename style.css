@@ -7,10 +7,14 @@
   --color-neutral-900: #000000;
   --color-white: #fff;
 }
+:target {
+  scroll-margin-top: 10rem;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   min-height: 100vh;
@@ -39,8 +43,12 @@ ul {
   width: 3rem;
   height: 3rem;
 }
-.hidden{
-  display: none;
+.h2 {
+  padding: 2rem 0;
+  font-size: 2.5rem;
+}
+.paragraph-text {
+  font-size: 1.5rem;
 }
 
 /* HEADER STYLE */
@@ -107,7 +115,8 @@ header {
 .links a:hover:after {
   width: 100%;
 }
-.close-menu, .open-menu{
+.close-menu,
+.open-menu {
   display: none;
 }
 
@@ -154,6 +163,108 @@ header {
   transform: scale(1.2) translateY(-10px);
   border: none;
 }
+
+/* About section */
+
+.about {
+  height: 70dvh;
+  background-color: var(--color-acent-100);
+}
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.about-image {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+}
+.about-image img {
+  width: 16vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--color-acent-400);
+  animation: floatImage 4s ease-in-out infinite;
+  transition: 0.4s ease;
+}
+.about-content-right {
+  width: 70%;
+  flex-direction: column;
+}
+.about-content-right h2 {
+  position: relative;
+
+}
+.about-content-right h2::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    var(--color-acent-100),
+    var(--color-neutral-900),
+    var(--color-acent-100)
+  );
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  margin: 1rem 0;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.info-left {
+  width: 50%;
+  position: relative;
+  padding: 1rem 2rem;
+  line-height: 2rem;
+}
+.info-left::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-acent-100),
+    var(--color-neutral-900),
+    var(--color-acent-100)
+  );
+  top: 0;
+  right: 0;
+}
+.info-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+}
+.info-item {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(2.3rem);
+  }
+  50% {
+    transform: translateY(4rem);
+  }
+  100% {
+    transform: translateY(2.3rem);
+  }
+}
+@keyframes scroll-left {
+  to {
+    left: -200px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .wrapper {
     padding: 0 7rem;
@@ -164,8 +275,18 @@ header {
   .home-content h3 {
     font-size: 3rem;
   }
-  .home-content p {
+  .paragraph-text {
     font-size: 1.3rem;
+  }
+  .h2{
+    font-size: 2rem;
+  }
+  /* ABOUT */
+  .about{
+    height: 70dvh;
+  }
+  .about-image {
+    top: 30px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -181,9 +302,18 @@ header {
   .home-content p {
     font-size: 1.1rem;
   }
+  .paragraph-text {
+    font-size: 1.2rem;
+  }
+  .h2{
+    font-size: 1.8rem;
+  }
 }
 @media screen and (max-width: 930px) {
-  .video-clip {
+  .background-clip{
+    height: 100dvh;
+    width: auto;
+    object-fit: cover;
   }
   .wrapper {
     padding: 0 4rem;
@@ -200,6 +330,9 @@ header {
   .links {
     width: 35%;
   }
+  .paragraph-text {
+    font-size: 1rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .background-clip {
@@ -211,7 +344,7 @@ header {
     background-size: cover;
   }
   .wrapper {
-    padding: 0 3rem;
+    padding: 0 1.5rem;
   }
   .links {
     position: fixed;
@@ -224,14 +357,18 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
     transition: right 400ms ease-out;
   }
-  .close-menu, .open-menu{
+  .close-menu,
+  .open-menu {
     display: inline-block;
     background: transparent;
     border: none;
-    color: var(--color-acent-100)
+    color: var(--color-acent-100);
   }
   .show {
     right: 0;
+  }
+  .hidden {
+    display: none;
   }
   .links ul {
     flex-direction: column;
@@ -242,5 +379,12 @@ header {
   }
   .links ul li a:after {
     display: none;
+  }
+  .about-content{
+    flex-direction: column;
+  }
+  .about-image img{
+    width: 16vw;
+    margin-top: 4rem;
   }
 }
