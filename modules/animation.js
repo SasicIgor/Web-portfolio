@@ -1,6 +1,5 @@
 export const animationObserver = (selector, animationClass, threshold = 0.5) => {
   const sectionElements = document.querySelectorAll(selector);
-  console.log(sectionElements)
   const observer = new IntersectionObserver(
     (sections) => {
       sections.forEach((section) => {

@@ -50,7 +50,7 @@ ul {
 .paragraph-text {
   font-size: 1.5rem;
 }
-.show-item{
+.show-item {
   animation: movedown 1s linear forwards;
 }
 
@@ -196,7 +196,6 @@ header {
 }
 .about-content-right h2 {
   position: relative;
-
 }
 .about-content-right h2::after {
   content: "";
@@ -251,7 +250,110 @@ header {
   padding-bottom: 1rem;
 }
 
+/* PROJECTS SECTION */
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100dvh;
+  position: relative;
+  width: 100%;
+  background-color: var(--color-primary-400);
+}
+
+.slider-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+  color: var(--color-acent-100);
+  position: absolute;
+  top: 50%;
+  transition: scale 0.3s ease;
+}
+.slider-arrow:hover {
+  scale: 1.3;
+}
+.slider-arrow-previous {
+  left: 25px;
+}
+.slider-arrow-previous i {
+  transform: rotate(-90deg);
+}
+.slider-arrow-next {
+  right: 25px;
+}
+.slider-arrow-next i {
+  transform: rotate(90deg);
+}
+.slider-item {
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  border-radius: 15px;
+  display: none;
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-acent-100);
+  opacity: 0;
+}
+
+.slider-item-1,
+.slider-item-3 {
+  display: flex;
+  height: 20rem;
+  opacity: 0.6;
+  width: 35rem;
+  z-index: 1;
+}
+
+.slider-item-1 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.slider-item-2 {
+  display: flex;
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  height: 30rem;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50rem;
+  z-index: 2;
+}
+
+.slider-item-3 {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.slider-left {
+  width: 60%;
+}
+
+.slider-left img {
+  max-width: 100%;
+}
+.slider-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  height: 100%;
+}
+.slider-right ul {
+  display: flex;
+}
+.slider-right ul li img {
+  width: 50%;
+  display: flex;
+}
+
 /* SKILL SECTION */
+
 .tech {
   background-color: var(--color-acent-100);
   display: flex;
@@ -273,15 +375,11 @@ header {
   margin-left: -3px;
   z-index: 0;
 }
-.animate-tech{
-  animation: moveline 6s linear forwards;
-}
 
 .tech-item {
   padding: 10px 50px;
   position: relative;
   width: 50%;
-  /* animation: movedown 1s linear forwards; */
   opacity: 0;
   z-index: 1;
 }
@@ -310,42 +408,41 @@ header {
 .tech-item-right img {
   left: -20px;
 }
-.tech-item-arrow{
+.tech-item-arrow {
   height: 0;
   width: 0;
-  position:absolute;
-  top:28px;
+  position: absolute;
+  top: 28px;
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
 }
-.tech-item-left-arrow{
+.tech-item-left-arrow {
   border-left: 15px solid white;
   right: -15px;
 }
-.tech-item-right-arrow{
+.tech-item-right-arrow {
   border-right: 15px solid white;
   left: -15px;
 }
-.tech-item:nth-child(2){
+.tech-item:nth-child(2) {
   animation-delay: 1s;
 }
-.tech-item:nth-child(3){
+.tech-item:nth-child(3) {
   animation-delay: 1s;
 }
-.tech-item:nth-child(4){
+.tech-item:nth-child(4) {
   animation-delay: 1s;
 }
-.tech-item:nth-child(5){
+.tech-item:nth-child(5) {
   animation-delay: 1s;
 }
-.tech-item:nth-child(6){
+.tech-item:nth-child(6) {
   animation-delay: 1s;
 }
-.tech-item:nth-child(7){
+.tech-item:nth-child(7) {
   animation-delay: 1s;
 }
-
 
 /* ANIMATIONS */
 
@@ -378,16 +475,6 @@ header {
 
 /* tech-line */
 
-@keyframes moveline {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-
 
 @media screen and (max-width: 1200px) {
   .wrapper {
@@ -402,15 +489,22 @@ header {
   .paragraph-text {
     font-size: 1.3rem;
   }
-  .h2{
+  .h2 {
     font-size: 2rem;
   }
   /* ABOUT */
-  .about{
+  .about {
     height: 70dvh;
   }
   .about-image {
     top: 30px;
+  }
+  .slider-item-1,
+  .slider-item-3 {
+    width: 30rem;
+  }
+  .slider-item-2 {
+    width: 45rem;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -429,12 +523,16 @@ header {
   .paragraph-text {
     font-size: 1.2rem;
   }
-  .h2{
+  .h2 {
     font-size: 1.8rem;
+  }
+  .slider-item-1,
+  .slider-item-3 {
+    display: none;
   }
 }
 @media screen and (max-width: 930px) {
-  .background-clip{
+  .background-clip {
     height: 100dvh;
     width: auto;
     object-fit: cover;
@@ -456,6 +554,9 @@ header {
   }
   .paragraph-text {
     font-size: 1rem;
+  }
+  .slider-item-2 {
+    width: 40rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -504,37 +605,43 @@ header {
   .links ul li a:after {
     display: none;
   }
-  .about-content{
+  .about-content {
     flex-direction: column;
   }
-  .about-image img{
+  .about-image img {
     width: 16vw;
     margin-top: 4rem;
   }
+  .slider-item-2 {
+    width: 35rem;
+  }
+  .slider-arrow {
+    font-size: 2rem;
+  }
   /* SKILLS SECTION */
-  .tech-stack{
+  .tech-stack {
     margin: 50px auto;
   }
-  .tech-stack::after{
+  .tech-stack::after {
     left: 31px;
   }
-  .tech-item{
+  .tech-item {
     width: 100%;
     padding-left: 80px;
     padding-right: 25px;
   }
-  .tech-item-text{
+  .tech-item-text {
     font-size: 13px;
   }
-  .tech-item-right{
-    left:0;
+  .tech-item-right {
+    left: 0;
   }
-  .tech-item img{
+  .tech-item img {
     left: 10px;
   }
-  .tech-item-arrow{
+  .tech-item-arrow {
     border-right: 15px solid white;
     border-left: 0;
-    left:-15px;
+    left: -15px;
   }
 }
