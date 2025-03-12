@@ -8,7 +8,7 @@ const SliderItem = (project) => {
     </div>
     <div class="slider-right">
       <h2>${project.title}</h2>
-      <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+      <p class="paragraph-text" >lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
       
       <div class="buttons">
         <button><a href="#">The project</a></button>

@@ -16,6 +16,10 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+textarea {
+  font-family: arial;
+}
+
 body {
   min-height: 100vh;
   min-height: 100dvh;
@@ -44,7 +48,7 @@ ul {
   height: 3rem;
 }
 .h2 {
-  padding: 2rem 0;
+  padding-bottom: 2rem;
   font-size: 2.5rem;
 }
 .paragraph-text {
@@ -58,7 +62,7 @@ ul {
 
 .background-clip {
   position: absolute;
-  width: 100vw;
+  width: auto;
   right: 0;
   top: 0;
   z-index: -1;
@@ -126,7 +130,7 @@ header {
 /* HERO STYLE */
 
 .home {
-  height: 100vh;
+  height: 100dvh;
 }
 .home-content {
   color: white;
@@ -170,21 +174,22 @@ header {
 /* About section */
 
 .about {
-  height: 70dvh;
+  height: 70vh;
   background-color: var(--color-acent-100);
 }
 .about-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 .about-image {
   width: 100%;
   position: absolute;
-  top: 10px;
+  top: -50px;
 }
 .about-image img {
-  width: 16vw;
+  width: 18vw;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--color-acent-400);
   animation: floatImage 4s ease-in-out infinite;
@@ -444,6 +449,120 @@ header {
   animation-delay: 1s;
 }
 
+/* CONTACT SECTION */
+.contact {
+  min-height: 100vh;
+  background: var(--color-neutral-100);
+}
+.contact-box {
+  position: relative;
+  height: 30rem;
+  width: 80%;
+  display: flex;
+  background-color: var(--color-primary-100);
+  box-shadow: 0 20px 25px var(--color-acent-100);
+}
+.contact-info {
+  position: absolute;
+  top: 25px;
+  left: -30px;
+  width: 40%;
+  height: 100%;
+  background: var(--color-primary-400);
+  z-index: 1;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--color-acent-100);
+}
+.contact-info h2,
+.contact-form-box h2 {
+  font-size: 1.8rem;
+}
+.contact-info p {
+  color: var(--color-acent-100);
+  padding-bottom: 1rem;
+}
+.contact-info .info-list {
+  position: relative;
+}
+.contact-info .info-list li {
+  display: flex;
+  margin: 1.2rem 0;
+}
+.contact-info .social {
+  align-self: center;
+}
+.contact-form-box {
+  position: absolute;
+  padding: 2rem;
+  padding-left: 3rem;
+  top: 25px;
+  right: 0;
+  width: 60%;
+}
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.input-box {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 1.1rem;
+  color: var(--color-neutral-900);
+  background-color: var(--color-primary-100);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-primary-400);
+}
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: var(--color-primary-400);
+  position: absolute;
+  bottom: 3px;
+}
+.input-box span {
+  position: absolute;
+  left: 0;
+  bottom: 2;
+}
+.input-box p {
+  margin-top: 1.2rem;
+}
+.width-half {
+  width: 48%;
+}
+.width-full {
+  width: 100%;
+}
+.input-submit input {
+  background-color: var(--color-acent-400);
+  border: none;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  color: var(--color-acent-100);
+}
+.input-submit input:hover {
+  background-color: var(--color-acent-100);
+  color: var(--color-acent-400);
+  box-shadow: 0 5px 5px var(--color-acent-400);
+}
+.error-span {
+  position: absolute;
+  bottom: -20px;
+  color: var(--color-acent-400);
+  display: none;
+}
+.show-error-message {
+  display: inline-block;
+}
 /* ANIMATIONS */
 
 /* about photo float */
@@ -475,7 +594,6 @@ header {
 
 /* tech-line */
 
-
 @media screen and (max-width: 1200px) {
   .wrapper {
     padding: 0 7rem;
@@ -494,10 +612,10 @@ header {
   }
   /* ABOUT */
   .about {
-    height: 70dvh;
+    height: 60vh;
   }
   .about-image {
-    top: 30px;
+    top: -30px;
   }
   .slider-item-1,
   .slider-item-3 {
@@ -506,10 +624,16 @@ header {
   .slider-item-2 {
     width: 45rem;
   }
+  .contact-box {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .wrapper {
     padding: 0 5rem;
+  }
+  .home {
+    min-height: 50%;
   }
   .home-content h1 {
     font-size: 4rem;
@@ -521,10 +645,16 @@ header {
     font-size: 1.1rem;
   }
   .paragraph-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .h2 {
     font-size: 1.8rem;
+  }
+  .about {
+    height: 50dvh;
+  }
+  .about-image {
+    top: -10px;
   }
   .slider-item-1,
   .slider-item-3 {
@@ -538,7 +668,7 @@ header {
     object-fit: cover;
   }
   .wrapper {
-    padding: 0 4rem;
+    padding: 0 2rem;
   }
   .home-content h1 {
     font-size: 3rem;
@@ -552,11 +682,38 @@ header {
   .links {
     width: 35%;
   }
-  .paragraph-text {
-    font-size: 1rem;
+  .about-image {
+    top: -5px;
+    margin-left: 1rem;
+  }
+  .about-image img {
+    width: 23vw;
   }
   .slider-item-2 {
     width: 40rem;
+  }
+  .contact {
+    width: 100%;
+    padding: 0;
+  }
+  .contact-box {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    width: 100%;
+  }
+  .contact-info {
+    flex-wrap: wrap;
+  }
+  .contact-info .social {
+    align-self: flex-start;
+  }
+  .contact-info,
+  .contact-form-box {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+    z-index: 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -567,9 +724,6 @@ header {
     background-image: url(assets/tablebackground.png);
     background-position: center;
     background-size: cover;
-  }
-  .wrapper {
-    padding: 0 1.5rem;
   }
   .links {
     position: fixed;
@@ -605,18 +759,35 @@ header {
   .links ul li a:after {
     display: none;
   }
-  .about-content {
-    flex-direction: column;
+  .about {
+    height: auto;
+    padding: 1rem 0;
   }
-  .about-image img {
-    width: 16vw;
-    margin-top: 4rem;
+  .about-content {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-content-right {
+    width: 100%;
+  }
+  .about-image {
+    display: none;
   }
   .slider-item-2 {
     width: 35rem;
   }
   .slider-arrow {
     font-size: 2rem;
+    z-index: 10;
+    background-color: var(--color-acent-400);
+    color: var(--color-acent-100);
+    padding: 0.3rem;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+  .slider-arrow:hover {
+    opacity: 0.8;
   }
   /* SKILLS SECTION */
   .tech-stack {

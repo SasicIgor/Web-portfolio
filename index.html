@@ -8,7 +8,18 @@
       src="https://kit.fontawesome.com/3d70c71a0e.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "b0N4JhFdIMzyChwSf",
+        });
+      })();
+    </script>
+    <script defer type="module" src="./app.js"></script>
     <title>Igor Sasic | Portfolio</title>
   </head>
   <body>
@@ -105,12 +116,18 @@
         </section>
         <section id="projects">
           <div class="wrapper slider-container">
-            <button class="slider-arrow slider-arrow-previous" data-direction="previous">
+            <button
+              class="slider-arrow slider-arrow-previous"
+              data-direction="previous"
+            >
               <i
                 data-direction="previous"
                 class="fa-solid fa-chevron-up"
               ></i></button
-            ><button class="slider-arrow slider-arrow-next" data-direction="next">
+            ><button
+              class="slider-arrow slider-arrow-next"
+              data-direction="next"
+            >
               <i data-direction="next" class="fa-solid fa-chevron-up"></i>
             </button>
           </div>
@@ -125,7 +142,7 @@
                 class="icon"
               />
               <div class="tech-item-text">
-                <p>
+                <p class="paragraph-text">
                   My first introduction to programming was HTML, CSS and
                   Javascript. That's where i learned the basics of a programming
                   langueage such as loops, primitive types, objects, arrays and
@@ -137,7 +154,7 @@
             <div class="tech-item tech-item-right">
               <img src="/assets/Node.js.png" alt="nodejs icon" class="icon" />
               <div class="tech-item-text">
-                <p>
+                <p class="paragraph-text">
                   Next thing that i encountered was node.js and express.js. I
                   created my own api. And the point of that was to understand
                   connection between front-end and back-end.
@@ -148,7 +165,7 @@
             <div class="tech-item tech-item-left">
               <img src="/assets/React.png" alt="React icon" class="icon" />
               <div class="tech-item-text">
-                <p>
+                <p class="paragraph-text">
                   React was to follow since is the most popular library for
                   javascript. It gives you flexibility that JS is missing.
                   Working with React i come across some techonologies like Redux
@@ -161,7 +178,7 @@
             <div class="tech-item tech-item-right">
               <img src="/assets/MongoDB.png" alt="MongoDB icon" class="icon" />
               <div class="tech-item-text">
-                <p>
+                <p class="paragraph-text">
                   The only thing left to fully understand the lifecycle of an
                   app was to connect it to the database. For that use NoSQL
                   database MongoDB.
@@ -172,7 +189,7 @@
             <div class="tech-item tech-item-left">
               <img src="/assets/Node.js.png" alt="nodejs icon" class="icon" />
               <div class="tech-item-text">
-                <p>
+                <p class="paragraph-text">
                   I decided to go for typescript as my next techonolgy, because
                   the it makes code cleaner, type safe and limits unexpected
                   behaviors and errors.
@@ -183,7 +200,7 @@
             <div class="tech-item tech-item-right">
               <img src="/assets/Next.js.png" alt="Next.js icon" class="icon" />
               <div class="tech-item-text">
-                <p>
+                <p class="paragraph-text">
                   Next.js is the most popular react framework so i decided that
                   it is reasonable next step. Working with it i encountered
                   tools like prisma for fetching, supabase for storing photos
@@ -200,13 +217,109 @@
                 class="icon"
               />
               <div class="tech-item-text">
-                <p>
+                <p class="paragraph-text">
                   In the near future i want to learn how to test my application
                   with tools like Vitest. Also I would like to learn GraphQL in
                   detail. Also I'm planning to do a react native project.
                 </p>
                 <span class="tech-item-arrow tech-item-left-arrow"></span>
               </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="contact flex-center wrapper">
+          <div class="contact-box">
+            <div class="contact-info">
+              <h2 class="h2">GET IN TOUCH</h2>
+              <p class="paragraph-text">
+                Feel free to contact me anytime. I'll be glad to answer your
+                questions.
+              </p>
+              <ul class="info-list">
+                <li>
+                  <i class="fa-solid fa-phone icon"></i>
+                  <span>+381 69 104 2518</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-envelope icon"></i>
+                  <span>igor.sasic811@gmail.com</span>
+                </li>
+              </ul>
+              <div class="social">
+                <a
+                  href="https://github.com/SasicIgor"
+                  target="_blank"
+                  class="flex-center icon"
+                  ><i class="fa-brands fa-square-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/igor-sasic-439987168/"
+                  target="_blank"
+                  class="flex-center icon"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+            <div class="contact-form-box">
+              <h2 class="h2 acent">MESSAGE ME INSTEAD</h2>
+              <form class="contact-form" id="form">
+                <div class="input-box width-half">
+                  <input
+                    type="text"
+                    id="name-input"
+                    class="form-input"
+                    placeholder="Your name"
+                    required
+                  />
+                  <span class="error-span" id="error-span-name"
+                    >Enter a valid name</span
+                  >
+                </div>
+                <div class="input-box width-half">
+                  <input
+                    type="email"
+                    id="email-input"
+                    class="form-input"
+                    placeholder="Your email"
+                    required
+                  />
+                  <span class="error-span" id="error-span-email"
+                    >Email is invalid</span
+                  >
+                </div>
+                <div class="input-box width-full">
+                  <input
+                    type="text"
+                    id="subject-input"
+                    class="form-input"
+                    placeholder="Subject"
+                    required
+                  />
+                  <span class="error-span" id="error-span-subject"
+                    >A message must have a subject</span
+                  >
+                </div>
+                <div class="input-box width-full">
+                  <textarea
+                    rows="1"
+                    id="message-input"
+                    class="form-input"
+                    placeholder="Your message"
+                    required
+                  ></textarea>
+                  <span class="error-span" id="error-span-text"
+                    >A message must contain at least 20 characters</span
+                  >
+                </div>
+                <div class="input-box input-submit">
+                  <input type="submit" value="send" />
+                </div>
+                <div class="input-box">
+                  <p class="paragraph-text" id="form-info">
+                    sad dasd adsad adsda sas
+                  </p>
+                </div>
+              </form>
             </div>
           </div>
         </section>
