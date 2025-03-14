@@ -133,98 +133,10 @@
           </div>
         </section>
         <section id="skills" class="tech wrapper">
+          <div class="tech-background-animation" id="tech-background-animation">
+          </div>
           <h2 class="h2 flex-center">Technologies that I worked with</h2>
-          <div class="tech-stack">
-            <div class="tech-item tech-item-left">
-              <img
-                src="./assets/JavaScript.png"
-                alt="javascript icon"
-                class="icon"
-              />
-              <div class="tech-item-text">
-                <p class="paragraph-text">
-                  My first introduction to programming was HTML, CSS and
-                  Javascript. That's where i learned the basics of a programming
-                  langueage such as loops, primitive types, objects, arrays and
-                  more...
-                </p>
-                <span class="tech-item-arrow tech-item-left-arrow"></span>
-              </div>
-            </div>
-            <div class="tech-item tech-item-right">
-              <img src="./assets/Node.js.png" alt="nodejs icon" class="icon" />
-              <div class="tech-item-text">
-                <p class="paragraph-text">
-                  Next thing that i encountered was node.js and express.js. I
-                  created my own api. And the point of that was to understand
-                  connection between front-end and back-end.
-                </p>
-                <span class="tech-item-arrow tech-item-right-arrow"></span>
-              </div>
-            </div>
-            <div class="tech-item tech-item-left">
-              <img src="./assets/React.png" alt="React icon" class="icon" />
-              <div class="tech-item-text">
-                <p class="paragraph-text">
-                  React was to follow since is the most popular library for
-                  javascript. It gives you flexibility that JS is missing.
-                  Working with React i come across some techonologies like Redux
-                  for global state management, react-router, eslint and vite,
-                  git and tanstack query among others.
-                </p>
-                <span class="tech-item-arrow tech-item-left-arrow"></span>
-              </div>
-            </div>
-            <div class="tech-item tech-item-right">
-              <img src="./assets/MongoDB.png" alt="MongoDB icon" class="icon" />
-              <div class="tech-item-text">
-                <p class="paragraph-text">
-                  The only thing left to fully understand the lifecycle of an
-                  app was to connect it to the database. For that use NoSQL
-                  database MongoDB.
-                </p>
-                <span class="tech-item-arrow tech-item-right-arrow"></span>
-              </div>
-            </div>
-            <div class="tech-item tech-item-left">
-              <img src="./assets/Node.js.png" alt="nodejs icon" class="icon" />
-              <div class="tech-item-text">
-                <p class="paragraph-text">
-                  I decided to go for typescript as my next techonolgy, because
-                  the it makes code cleaner, type safe and limits unexpected
-                  behaviors and errors.
-                </p>
-                <span class="tech-item-arrow tech-item-left-arrow"></span>
-              </div>
-            </div>
-            <div class="tech-item tech-item-right">
-              <img src="./assets/Next.js.png" alt="Next.js icon" class="icon" />
-              <div class="tech-item-text">
-                <p class="paragraph-text">
-                  Next.js is the most popular react framework so i decided that
-                  it is reasonable next step. Working with it i encountered
-                  tools like prisma for fetching, supabase for storing photos
-                  and mongodb for the rest data. I used tailwind css and shadcn
-                  to style my projects.
-                </p>
-                <span class="tech-item-arrow tech-item-right-arrow"></span>
-              </div>
-            </div>
-            <div class="tech-item tech-item-left">
-              <img
-                src="./assets/GraphQL.png"
-                alt="javascript icon"
-                class="icon"
-              />
-              <div class="tech-item-text">
-                <p class="paragraph-text">
-                  In the near future i want to learn how to test my application
-                  with tools like Vitest. Also I would like to learn GraphQL in
-                  detail. Also I'm planning to do a react native project.
-                </p>
-                <span class="tech-item-arrow tech-item-left-arrow"></span>
-              </div>
-            </div>
+          <div class="tech-stack" id="tech-stack">
           </div>
         </section>
         <section id="contact" class="contact flex-center wrapper">
@@ -238,11 +150,13 @@
               <ul class="info-list">
                 <li>
                   <i class="fa-solid fa-phone icon"></i>
-                  <span>+381 69 104 2518</span>
+                  <a href="tel: +381 69 104 2518">+381 69 104 2518</a>
                 </li>
                 <li>
                   <i class="fa-regular fa-envelope icon"></i>
-                  <span>igor.sasic811@gmail.com</span>
+                  <a href="mailto:igor.sasic811@gmail.com"
+                    >igor.sasic811@gmail.com</a
+                  >
                 </li>
               </ul>
               <div class="social">
@@ -261,7 +175,7 @@
               </div>
             </div>
             <div class="contact-form-box">
-              <h2 class="h2 acent">MESSAGE ME INSTEAD</h2>
+              <h2 class="h2 acent">MESSAGE ME</h2>
               <form class="contact-form" id="form">
                 <div class="input-box width-half">
                   <input
@@ -315,9 +229,7 @@
                   <input type="submit" value="send" />
                 </div>
                 <div class="input-box">
-                  <p class="paragraph-text" id="form-info">
-
-                  </p>
+                  <p class="paragraph-text" id="form-info"></p>
                 </div>
               </form>
             </div>
