@@ -4,7 +4,7 @@ import { data } from "./data.js";
 const sliderContainer = document.querySelector(".slider-container");
 
 const SliderList=()=> {
-  data.forEach((project,i) => {
+  data.forEach((project) => {
     const newProject = SliderItem(project);
     sliderContainer.appendChild(newProject);
   });
