@@ -30,20 +30,16 @@ const Slider = () => {
   const renderSlider = () => {
     Array.from(document.getElementsByClassName("overlay")).forEach((elem)=>elem.remove());
     itemsArray.forEach((item) => {
-      item.classList.remove("slider-item-1", "slider-item-2", "slider-item-3", 'grid-slider');
-      delete item.dataset.direction;
+      item.classList.remove("slider-item-1", "slider-item-2", "slider-item-3");
       item.removeEventListener("click", handleSliderMove);
     });
     renderItems.forEach((item, i) => {
-      item.classList.add("grid-slider");
       if (i === 1) {
         item.classList.add("slider-item-2");
       }
       if (i === 0 || i === 2) {
         item.classList.add(`slider-item-${i + 1}`);
         if (i == 0) {
-          console.log("i entered to put other classes but 1");
-
           let overlay = document.createElement("div");
           overlay.dataset.direction = "previous";
           overlay.classList.add("overlay");

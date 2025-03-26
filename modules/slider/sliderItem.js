@@ -1,6 +1,7 @@
 const SliderItem = (project) => {
   const sliderComponent = document.createElement("div");
   sliderComponent.classList.add("slider-item");
+  sliderComponent.classList.add("grid-slider");
   const { title, description, imageUrl, projectLink, codeLink } = project;
   sliderComponent.innerHTML = `
     <div class="slider-img">

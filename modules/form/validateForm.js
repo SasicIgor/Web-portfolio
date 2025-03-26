@@ -3,13 +3,13 @@ import hideErrorMessage from "./hideErrorMessage.js";
 const validateForm = (nameInput, emailInput, subjectInput, messageInput) => {
   const emailValidation = /^[\w-\.]+@([\w-]+\.){1,2}[\w-]{2,5}$/;
   const subjectValidation = /^[\w\s]{3,}$/;
-  const nameValidation = /^[a-zA-Z]{2,}$/;
+  const nameValidation = /^[a-zA-Z]{1,}(\.?\s*[a-zA-Z]+)$/;
   const messageValidation = /^[a-zA-Z0-9., -]{20,}$/;
 
-  const emailIsValid = emailValidation.test(emailInput.value);
-  const subjectIsValid = subjectValidation.test(subjectInput.value);
-  const nameIsValid = nameValidation.test(nameInput.value);
-  const messageIsValid = messageValidation.test(messageInput.value);
+  const emailIsValid = emailValidation.test(emailInput.value.trim());
+  const subjectIsValid = subjectValidation.test(subjectInput.value.trim());
+  const nameIsValid = nameValidation.test(nameInput.value.trim());
+  const messageIsValid = messageValidation.test(messageInput.value.trim());
 
   if (!emailIsValid) {
     document
