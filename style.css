@@ -72,7 +72,7 @@ ul {
 
 .background-clip {
   position: absolute;
-  width:100%;
+  min-width: 100%;
   right: 0;
   top: 0;
   z-index: -1;
@@ -170,7 +170,7 @@ header {
 /* About section */
 
 .about {
-  height: 70vh;
+  height: auto;
   background-color: var(--color-acent-100);
 }
 .about-content {
@@ -178,14 +178,15 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin: 2rem 0;
 }
 .about-image {
   width: 100%;
   position: absolute;
-  top: -50px;
+  top: 5%;
 }
 .about-image img {
-  width: 18vw;
+  max-width: 14rem;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--color-acent-400);
   animation: floatImage 4s ease-in-out infinite;
@@ -247,8 +248,6 @@ header {
   padding: 1rem 2rem;
 }
 .info-item {
-  display: flex;
-  justify-content: space-around;
   padding-bottom: 1rem;
 }
 
@@ -709,11 +708,8 @@ header {
     font-size: 2rem;
   }
   /* ABOUT */
-  .about {
-    height: 60vh;
-  }
-  .about-image {
-    top: -30px;
+  .about-content {
+    margin: 1rem 0;
   }
   .slider-item-1,
   .overlay-1,
@@ -757,11 +753,11 @@ header {
   .h2 {
     font-size: 1.8rem;
   }
-  .about {
-    height: 60dvh;
+  .about-content {
+    margin: 1rem 0;
   }
   .about-image {
-    top: -10px;
+    top: 10%;
   }
   .slider-item {
     height: auto;
@@ -816,7 +812,6 @@ header {
     width: 35%;
   }
   .about-image {
-    top: -5px;
     margin-left: 1rem;
   }
   .about-image img {
