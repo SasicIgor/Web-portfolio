@@ -8,6 +8,14 @@ export const data = [
     codeLink: "https://github.com/SasicIgor/Dice-game",
   },
   {
+    title: "Mascots project",
+    description:
+      "Project was developed in collaboration with a colleague with the goal of automating the mascot booking process for events. It is a full-stack application built with the MERN stack and TypeScript for type safety. We used TanStack Query for efficient data fetching and caching, and employed React Context for state management across the application.",
+    imageUrl: "./assets/Mascots-project.png",
+    projectLink: "",
+    codeLink: "https://github.com/SasicIgor/mascots",
+  },
+  {
     title: "Next.js Store Project",
     description:
       "This project is the first project I did with using Next. Working on this project I used Prisma for communication with DB (Supabase for images/MongoDB for informations), clerk for authorisation and zod for validations.",
@@ -23,13 +31,5 @@ export const data = [
     imageUrl: "./assets/GraphQL-project.png",
     projectLink: "https://musical-belekoy-92b2bd.netlify.app/",
     codeLink: "https://github.com/SasicIgor/GraphQL-project",
-  },
-  {
-    title: "REST Api",
-    description:
-      "In this project i understand the REST api and endpoints. It has users and cocktail route. We can do full login/register, as well as CRUD operations with cocktails. Tested with POSTMAN.",
-    imageUrl: "./assets/Server.png",
-    projectLink: "",
-    codeLink: "https://github.com/SasicIgor/cocktail-app-server/tree/master",
   },
 ];
