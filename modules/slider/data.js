@@ -8,6 +8,21 @@ export const data = [
     codeLink: "https://github.com/SasicIgor/Dice-game",
   },
   {
+    title: "Quiz game",
+    description:
+      "Goal of this game was to get familiar with TypeScript and Context API.",
+    imageUrl: "./assets/Quiz-game.png",
+    projectLink: "https://sasicigor.github.io/Quiz-app/",
+    codeLink: "https://github.com/SasicIgor/Quiz-app",
+  },
+  {
+    title: "Message me (backend)",
+    description: "This is backend project in node/express as start of the chat app project.",
+    imageUrl: "./assets/Mascots-project.png",
+    projectLink: "",
+    codeLink: "https://github.com/SasicIgor/Message-me-backend",
+  },
+  {
     title: "Mascots project",
     description:
       "Project was developed in collaboration with a colleague with the goal of automating the mascot booking process for events. It is a full-stack application built with the MERN stack and TypeScript for type safety. We used TanStack Query for efficient data fetching and caching, and employed React Context for state management across the application.",
